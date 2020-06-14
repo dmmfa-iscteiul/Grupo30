@@ -13,6 +13,12 @@ import pl.edu.icm.cermine.metadata.model.DateType;
 import pl.edu.icm.cermine.metadata.model.DocumentAuthor;
 import pl.edu.icm.cermine.metadata.model.DocumentMetadata;
 
+/**
+ * @author Diogo
+ *
+ *Classe onde se dá a criação da página html
+ *
+ */
 public class Main {
 
 //	private static String path = "C:\\Users\\anabe\\wordpress\\ArtigosCovid\\";

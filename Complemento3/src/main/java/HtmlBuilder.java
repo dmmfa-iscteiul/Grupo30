@@ -2,8 +2,16 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+
+/**
+ * @author Diogo
+ * 
+ * Esta classe tem como objetivo auxiliar na construção do conteúdo do ficheiro html
+ *
+ */
 public class HtmlBuilder {
 
+ 
 	private int columns;
 	private final StringBuilder table = new StringBuilder();
 	public static String HTML_START = "<html>";
@@ -19,11 +27,20 @@ public class HtmlBuilder {
 	public static String COLUMN_END = "</td>";
 
 	
-	public HtmlBuilder(String header, boolean border, int rows, int columns) {
+	/**
+	 * @param title
+	 * @param border
+	 * @param rows
+	 * @param columns
+	 * 
+	 * Construtor da página html
+	 */
+	
+	public HtmlBuilder(String title, boolean border, int rows, int columns) {
 		this.columns = columns;
-		if (header != null) {
+		if (title != null) {
 			table.append("<b>");
-			table.append(header);
+			table.append(title);
 			table.append("</b>");
 		}
 		table.append(HTML_START);
@@ -32,6 +49,14 @@ public class HtmlBuilder {
 		table.append(HTML_END);
 	}
 
+	
+	/**
+	 * @param values
+	 * 
+	 * Recebe um conjunto de strings que correspondem aos nomes de cada coluna
+	 * 
+	 * Serve para criar o cabeçalho da tabela que irá ser gerada
+	 */
 	
 	public void addTableHeader(String... values) {
 		if (values.length != columns) {
@@ -52,6 +77,14 @@ public class HtmlBuilder {
 		}
 	}
 
+	
+	/**
+	 * @param values
+	 * 
+	 * Recebe um conjunto de strings que corresponde ao conteúdo de cada célula de uma linha
+	 * 
+	 * Adicionar os valores das células de cada fila
+	 */
 
 	public void addRowValues(String... values) {
 		if (values.length != columns) {
@@ -73,12 +106,23 @@ public class HtmlBuilder {
 		}
 	}
 
+	/**
+	 * 
+	 * Transformar a StringBuilder numa string
+	 * 
+	 */
 	
 	public String build() {
 		return table.toString();
 	}
 	
-
+	
+	/**
+	 * @param file
+	 * @param text
+	 * 
+	 * Escrever a string dentro de um ficheiro
+	 */
 	public void writeToFile(File file, String text) throws IOException {
 
 		PrintWriter writer = new PrintWriter(file);
