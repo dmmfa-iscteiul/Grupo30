@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="../libs/cermine-impl-1.13.jar;../libs/cermine-impl-1.13-jar-with-dependencies.jar;C:\Users\Diogo\.p2\pool\plugins\org.junit_4.13.0.v20200204-1500.jar;target/test-classes;../libs/cermine-tools-1.13.jar;C:\Users\Diogo\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar" destdir="" doctitle="Javadoc_Complemento3" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="true" source="1.8" sourcefiles="src/main/java/HtmlBuilder.java,src/test/java/HtmlBuilderTest.java,src/main/java/Main.java,src/test/java/MainTest.java" sourcepath="src/main/java;src/main/resources;src/test/java" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

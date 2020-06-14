@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Complemento3</groupId>
+	<artifactId>Complemento3</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin><!-- Use latest to build recent Java applications -->
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>icm</id>
+			<name>ICM repository</name>
+			<url>http://maven.icm.edu.pl/artifactory/repo</url>
+		</repository>
+	</repositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>pl.edu.icm.cermine</groupId>
+				<artifactId>cermine-parent</artifactId>
+				<version>1.14-SNAPSHOT</version>
+			</dependency>
+			</dependencies>
+	</dependencyManagement>
+
+
+</project>
