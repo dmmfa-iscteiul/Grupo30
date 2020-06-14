@@ -21,8 +21,8 @@ import pl.edu.icm.cermine.metadata.model.DocumentMetadata;
  */
 public class Main {
 
-//	private static String path = "C:\\Users\\anabe\\wordpress\\ArtigosCovid\\";
-	private static String path = "C:\\Users\\Diogo\\Documents\\Informatica e Gestão\\Engenharia Software II\\ArtigosCovid\\";
+	private static String path = ".\\ArtigosCovid\\";
+//	private static String path = "C:\\Users\\Diogo\\Documents\\Informatica e Gestão\\Engenharia Software II\\ArtigosCovid\\";
 	
 	public static void main(String[] args) {
 
