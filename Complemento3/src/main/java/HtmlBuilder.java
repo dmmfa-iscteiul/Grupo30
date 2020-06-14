@@ -28,10 +28,10 @@ public class HtmlBuilder {
 
 	
 	/**
-	 * @param title
-	 * @param border
-	 * @param rows
-	 * @param columns
+	 * @param title titulo da tabela
+	 * @param border rebordo da tabela
+	 * @param rows linhas da tabela
+	 * @param columns colunas da tabela
 	 * 
 	 * Construtor da página html
 	 */
@@ -51,9 +51,7 @@ public class HtmlBuilder {
 
 	
 	/**
-	 * @param values
-	 * 
-	 * Recebe um conjunto de strings que correspondem aos nomes de cada coluna
+	 * @param values Recebe um conjunto de strings que correspondem aos nomes de cada coluna
 	 * 
 	 * Serve para criar o cabeçalho da tabela que irá ser gerada
 	 */
@@ -79,9 +77,7 @@ public class HtmlBuilder {
 
 	
 	/**
-	 * @param values
-	 * 
-	 * Recebe um conjunto de strings que corresponde ao conteúdo de cada célula de uma linha
+	 * @param values  Recebe um conjunto de strings que corresponde ao conteúdo de cada célula de uma linha
 	 * 
 	 * Adicionar os valores das células de cada fila
 	 */
@@ -107,6 +103,7 @@ public class HtmlBuilder {
 	}
 
 	/**
+	 * @return string representa numa string todo o conteudo do ficheiro html
 	 * 
 	 * Transformar a StringBuilder numa string
 	 * 
@@ -118,8 +115,10 @@ public class HtmlBuilder {
 	
 	
 	/**
-	 * @param file
-	 * @param text
+	 * @param file ficheiro html
+	 * @param text conteudo do ficheiro html
+	 * 
+	 * @throws IOException
 	 * 
 	 * Escrever a string dentro de um ficheiro
 	 */
