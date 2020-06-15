@@ -26,7 +26,7 @@ public class GitHubGetData {
 	private ArrayList<String> tagsName; //File Tag
 	private ArrayList<String> hyperLinks; //Spread Visualization Link
 	private ArrayList<String> timestamp; //File Timestamp
-
+ 
 	private Git git;
 	
 /**
