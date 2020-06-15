@@ -22,3 +22,6 @@ Coisas com erros:
 
 Coisas mal implementadas:
 
+- Complemento 3:
+  A aplicação demorará sempre algum tempo a correr, uma vez que cada vez que esta é executada vai buscar sempre a metadata de todos os pdfs do repositório, ainda que não tenham existido alterações nos mesmos ou no repositório.
+
