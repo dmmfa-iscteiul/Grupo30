@@ -12,23 +12,16 @@
 82173 - Catarina Taquelim - Complemento 2
 
 
-# Instruções 
-De seguida apresentam-se as indicações necessárias ao funcionamento do projeto. 
 
-
-
-
-
-
-
-
-
-Funcionalidades com erros:
+# Funcionalidades com erros:
 
  - Complemento 3:
   Quando executado o ficheiro .sh irá ser mostrada uma mensagem de erro, na primeira vez que este é executado devido a falta do ficheiro .html, mas o programa consegue correr sem qualquer problema.
+  
+ - A execução dos jars nos pontos do menu correspondentes do web site Wordpress não se encontram funcionais, apesar de se ter incorporado os ficheiros .sh nas páginas corretas. Assim, os complementos necessitam de ser executados fora do container no Windows. 
 
-Funcionalidades mal implementadas:
+
+# Funcionalidades mal implementadas:
 
  Para todas as aplicações java referentes aos Complemento 3, Complementa 4 e Complemento 6, deveriam estar a ser apagados os ficheiros temporários porém por vezes isto não acontece, pelo que deve ser verificada a inexistencia dessas pastas.
 
