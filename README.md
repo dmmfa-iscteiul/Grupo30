@@ -1,10 +1,10 @@
 # Grupo30
-73024 - Diogo Ferreira - Requisito 3
-82877 - Anabela Pestana - Requisito 1
-82664 - Ana Sofia Alves - Requisito 5
-82851 - António Carvalho - Requisito 4
-82503 - Catarina Afonso - Requisito 6
-82173 - Catarina Taquelim - Requisito 2
+73024 - Diogo Ferreira - Complemento 3
+82877 - Anabela Pestana - Complemento 1
+82664 - Ana Sofia Alves - Complemento 5
+82851 - António Carvalho - Complemento 4
+82503 - Catarina Afonso - Complemento 6
+82173 - Catarina Taquelim - Complemento 2
 
 
 # Instruções 
