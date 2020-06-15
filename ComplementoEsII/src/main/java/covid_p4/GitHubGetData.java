@@ -28,7 +28,15 @@ public class GitHubGetData {
 	private ArrayList<String> timestamp; //File Timestamp
 
 	private Git git;
-
+	
+/**
+ * CONSTRUTOR DA CLASSE QUE ATRIBUI AOS SEUS ATRIBUTOS OS PARAMETROS E LIMPA O REPOSITÓRIO (PATH). 
+ * @param remote_url - CAMINHO DO REPOSITÓRIO GIT ORIGINÁRIO DE TODA A INFORMAÇÃO.
+ * @param path - REPOSITÓRIO ONDE É CLONADA A INFORMAÇÃO DO REPOSITÓRIO GIT.
+ * @param remote_url_graph - CAMINHO DO LINK PARA EDIÇÃO, PARA PARTILHAR A VISTA DO SPREADING DO COVID DE ACORDO COM OS DADOS DO FICHEIRO.
+ * @param wordToChangeLink - PALAVRA CHAVE PARA MUDAR NO LINK (REMOTE_URL_GRAPH).
+ * @param FileName - NOME DO FICHEIRO, AO QUAL SE QUER SABER AS VERSÕES (TAGS).
+ */
 	public GitHubGetData(String remote_url, File path, String remote_url_graph, String wordToChangeLink, String FileName) {
 		this.REMOTE_URL=remote_url;
 		this.PATH=path;
@@ -39,6 +47,13 @@ public class GitHubGetData {
 		System.out.println("Cleaning...");
 	}
 
+	/**
+	 * MÉTODO QUE CLONA O REPOSITÓRIO PARA O WORKSPACE.
+	 * @throws IOException 
+	 * @throws InvalidRemoteException
+	 * @throws TransportException
+	 * @throws GitAPIException
+	 */
 	public void cloneRepository() throws IOException, InvalidRemoteException, TransportException, GitAPIException {
 		System.out.println("Cloning...");
 		git= Git.cloneRepository()
@@ -47,6 +62,10 @@ public class GitHubGetData {
 				.call();
 	}
 
+	/**
+	 * MÉTODO PARA LIMPAR O REPOSITÓRIO ONDE SE ENCONTRA O CLONE DO REPOSITÓRIO GIT.
+	 * @param file - REPOSITÓRIO ONDE É ELIMINADA A INFORMAÇÃO DO REPOSITÓRIO LOCAL.
+	 */
 	public void clearFiles(File file) {	
 		if(file.exists()) {
 			for (File subFile : file.listFiles()) {
@@ -60,6 +79,10 @@ public class GitHubGetData {
 		}
 	}
 
+	/**
+	 * MÉTODO QUE GUARDA OS NOMES DAS TAGS EXISTENTES NO REPOSITÓRIO GIT.
+	 * @throws Exception
+	 */
 	public void getTags() throws Exception {
 		List<Ref> allTags = git.tagList().call();
 
@@ -79,6 +102,11 @@ public class GitHubGetData {
 		numbertags=tags.size();
 	}
 
+	/**
+	 * MÉTODO QUE GUARDA A DESCRIÇÃO ASSOCIADA A CADA TAG.
+	 * @throws NoHeadException
+	 * @throws GitAPIException
+	 */
 	public void getTagsDescription () throws NoHeadException, GitAPIException {
 		commitsMessage = new ArrayList<String>();
 		timestamp = new ArrayList<String>();
@@ -94,6 +122,9 @@ public class GitHubGetData {
 		});	
 	} 
 
+	/**
+	 * MÉTODO QUE REALIZA A MUDANÇA DA PALAVRA CHAVE PARA AS TAGSNAMES DE MODO A TONAR O LINK UTILIZAVÉL.
+	 */
 	public void getHyperLink () {
 		hyperLinks = new ArrayList<String>();
 		for(String tag :  tagsName) {
@@ -103,7 +134,10 @@ public class GitHubGetData {
 		}	
 	}
 	
-	
+	/**
+	 * MÉTODO QUE RETORNA UM ARRAY DE ARRAYS EM QUE CADA UMA CORRESPONDE A UMA LINHA DA TABELA.
+	 * @return 
+	 */
 	public ArrayList<ArrayList<String>> getArraysInformation() {
 		ArrayList<ArrayList<String>> informationsToTable = new ArrayList<>();
 		for(int i=0; i < numbertags; i++) {

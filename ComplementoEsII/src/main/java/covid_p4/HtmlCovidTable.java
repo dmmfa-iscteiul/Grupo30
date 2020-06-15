@@ -13,6 +13,11 @@ public class HtmlCovidTable {
 	private int columns;
 	private File path_html;
 
+	/**
+	 * CONSTRUTOR DA CLASSE QUE CRIA A O FICHEIRO PARA A TABELA HTML.
+	 * @param columns - NÚMERO DE COLUNAS QUE A TABELA IRÁ TER AQUANDO A SUA CRIAÇÃO.
+	 * @param path_html - CAMINHO (PATH), PARA O FICHEIRO HTML.
+	 */
 	public HtmlCovidTable(int columns, File path_html) {
 		this.columns=columns;
 		this.path_html=path_html;
@@ -23,6 +28,10 @@ public class HtmlCovidTable {
 	}
 
 
+	/**
+	 * MÉTODO QUE ADICIONA OS CABEÇALHOS (1 POR CADA COLUNA).
+	 * @param titleColumns - ARRAYLIST EM QUE CADA COMPONENTE CORRESPONDE A UM COMPONENTE DO CABEÇALHO DA TABELA.
+	 */
 	public void addTitleInformation(ArrayList<String> titleColumns) {
 		String rStart = "<tr>";
 		String rFinish = "</tr>";
@@ -47,6 +56,10 @@ public class HtmlCovidTable {
 		}
 	}
 
+	/**
+	 * MÉTODO QUE ADICIONA A INFORMAÇÃO À TABELA (A LINHAS SEGUINTES DEPOIS DO CABEÇALHO).
+	 * @param subInformation - ARRAYLIST EM QUE CADA COMPONENTE CORRESPONDE A UM COMPONENTE DA LINHA DA TABELA.
+	 */
 	public void addSubInformation(ArrayList<String> subInformation) {
 		String rStart = "<tr>";
 		String rFinish = "</tr>";
@@ -72,6 +85,11 @@ public class HtmlCovidTable {
 	}
 
 
+	/**
+	 * MÉTODO QUE CRIA O FICHEIRO HTML QUE ORIGINA A TABELA E UTILIZA OS METODOS ANTERIORES PARA A COMPLETAR. 
+	 * @param titleColumns - ARRAYLIST EM QUE CADA COMPONENTE CORRESPONDE A UM COMPONENTE DO CABEÇALHO DA TABELA.
+	 * @param allLinesInformation - ARRAYLIST DE ARRAYLISTS EM QUE CADA UMA CONTEM OS ELEMENTOS DE CADA LINHA DA TABELA.
+	 */
 	public void createFile(ArrayList<String> titleColumns, ArrayList<ArrayList<String>> allLinesInformation) {
 		File f = path_html;
 		try {

@@ -1,6 +1,5 @@
-package classTests;
+package covid_p4;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,8 +16,8 @@ class MainTest {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testMain() throws Exception {
+	 Main.main(null);
 	}
 
 }
