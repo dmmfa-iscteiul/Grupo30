@@ -20,6 +20,9 @@ De seguida apresentam-se as indicações necessárias ao funcionamento do projet
 
 Coisas com erros:
 
+ - Complemento 3:
+  Quando executado o ficheiro .sh irá ser mostrada uma mensagem de erro, na primeira vez que este é executado devido a falta do ficheiro .html, mas o programa consegue correr sem qualquer problema.
+
 Coisas mal implementadas:
 
 - Complemento 3:
