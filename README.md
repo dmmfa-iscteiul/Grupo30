@@ -25,7 +25,7 @@ Coisas com erros:
 
 Coisas mal implementadas:
 
- Para todas as aplicações java, deveriam estar a ser apagados os ficheiros temporários mas não estão, pelo que isso deveria ser feito.
+ Para todas as aplicações java referentes aos Complemento 3, Complementa 4 e Complemento 6, deveriam estar a ser apagados os ficheiros temporários mas não estão, pelo que isso deveria ser feito.
 
 - Complemento 3:
   A aplicação demorará sempre algum tempo a correr, uma vez que cada vez que esta é executada vai buscar sempre a metadata de todos os pdfs do repositório, ainda que não tenham existido alterações nos mesmos ou no repositório.
