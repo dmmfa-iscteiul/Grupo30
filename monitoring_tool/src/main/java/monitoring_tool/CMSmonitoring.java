@@ -37,8 +37,8 @@ public class CMSmonitoring {
 	}
 
 	/**
-	 * classe testAvailabilitypage È usada para navegar atÈ ao URL da pagina dado como parametro de forma a testar
-	 * se este est· a abrir ou n„o
+	 * classe testAvailabilitypage √© usada para navegar at√© ao URL da pagina dado como parametro de forma a testar
+	 * se este est√° a abrir ou n√£o
 	 * @param pageURL fornece o URL do site pretendido
 	 */
 	public void testAvailabilitypage(String pageURL) {
@@ -46,13 +46,13 @@ public class CMSmonitoring {
 	}
 
 	/**
-	 * classe testLogin È usada para navegar atÈ certa p·gina de login de determinado URL inserindo automaticamente
+	 * classe testLogin √© usada para navegar at√© certa p√°gina de login de determinado URL inserindo automaticamente
 	 * as credencias de determinado utilizador de forma a testar a entrada no site.
-	 * Caso entre no site, isto È, caso encontre a palavra DashBoard, ent„o a metrica de 'uptime' È incrementada 
+	 * Caso entre no site, isto √©, caso encontre a palavra DashBoard, ent√£o a metrica de 'uptime' √© incrementada 
 	 * servindo de contador para as vezes que a entrada foi bem sucedida
-	 * Caso contrario È incrementada contrariamente a metrica de 'downtime' contabilizando as vezes em que o login
-	 * nao foi bem sucedido e È enviado um email ao administrador a informar do problema
-	 * Entra no else quando se tenta fazer um login com uma sess„o j· iniciada.
+	 * Caso contrario √© incrementada contrariamente a metrica de 'downtime' contabilizando as vezes em que o login
+	 * nao foi bem sucedido e √© enviado um email ao administrador a informar do problema
+	 * Entra no else quando se tenta fazer um login com uma sess√£o j√° iniciada.
 	 */
 	public void testLogin() {
 		driver.navigate().to("http://192.168.99.100:8000/wp-login.php");
@@ -69,52 +69,78 @@ public class CMSmonitoring {
 		}
 	}
 	
+		
 	/**
-	 * classe testWebPages È usada para certificar a abertura de certas p·ginas no site
-	 * Caso entre na pagina ent„o a metrica de 'uptime' È incrementada 	 * servindo de contador para as vezes 
-	 * que a entrada foi bem sucedida
-	 * Caso contrario È incrementada contrariamente a metrica de 'downtime' contabilizando as vezes em que a entrada
-	 * nao foi bem sucedida e È enviado um email ao administrador a informar do problema
+	 * As seguintes classes s√£o destinadas ao site original para certificar a abertura de certas p√°ginas no site
+	 * Caso entre na pagina ent√£o a metrica de 'uptime' √© incrementada 	 
+	 * servindo de contador para as vezes que a entrada foi bem sucedida
+	 * Caso contrario √© incrementada contrariamente a metrica de 'downtime' contabilizando as vezes em que a entrada
+	 * nao foi bem sucedida e √© enviado um email ao administrador a informar do problema
 	 */
-
-	//	public void testWebPages() {
-	//		try {	
-	//			driver.findElement(By.linkText("Home"));
-	//			driver.findElement(By.linkText("About us"));
-	//			driver.findElement(By.linkText("FAQ"));
-	//			driver.findElement(By.linkText("Repository"));
-	//			driver.findElement(By.linkText("Covid Applications"));
-	//			driver.findElement(By.linkText("Web Site Analytics"));
-	//			driver.findElement(By.linkText("User"));
-	//			uptime_pages++;
-	//		}catch (Exception e) {
-	//			downtime_pages++;
-	//			System.out.println("Falha a entrar nas p·ginas! \n" + "metrica downtime: " + downtime_pages);
-	//			sendEmail("Falha a entrar nas p·ginas! \n" + "metrica downtime: " + downtime_pages);
-	//		}
-	//	}
+//	public void testHomePage() {
+//	try {	
+//		driver.navigate().to("http://192.168.99.100:8000/");
+//		driver.findElement(By.xpath("//*[@id=\"menu-item-126\"]/a\r\n")).getText();
+//		uptime_pages++;
+//	}catch (Exception e) {
+//		downtime_pages++;
+//		System.out.println("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//		sendEmail("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//	}
+//}
+//
+//public void testAboutUsPage() {
+//	try {	
+//		driver.navigate().to("http://192.168.99.100:8000/\r\n");
+//		driver.findElement(By.xpath("//*[@id=\"menu-item-125\"]/a\r\n")).getText();
+//		uptime_pages++;
+//	}catch (Exception e) {
+//		downtime_pages++;
+//		System.out.println("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//		sendEmail("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//	}
+//}
+//
+//public void testCovidApplicationsPage() {
+//	try {	
+//		driver.navigate().to("http://192.168.99.100:8000/\r\n");
+//		driver.findElement(By.xpath("//*[@id=\"menu-item-119\"]/a\r\n")).getText();
+//		uptime_pages++;
+//	}catch (Exception e) {
+//		downtime_pages++;
+//		System.out.println("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//		sendEmail("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//	}
+//}
+//
+//public void testFAQPage() {
+//	try {	
+//		driver.navigate().to("http://192.168.99.100:8000/\r\n");
+//		driver.findElement(By.xpath("//*[@id=\"menu-item-144\"]/a\r\n")).getText();
+//		uptime_pages++;
+//	}catch (Exception e) {
+//		downtime_pages++;
+//		System.out.println("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//		sendEmail("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//	}
+//}
+//
+//public void testContactUsPage() {
+//	try {	
+//		driver.navigate().to("http://192.168.99.100:8000/\r\n");
+//		driver.findElement(By.xpath("//*[@id=\"menu-item-145\"]/a\r\n")).getText();
+//		uptime_pages++;
+//	}catch (Exception e) {
+//		downtime_pages++;
+//		System.out.println("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//		sendEmail("Falha a entrar nas p√°ginas! \n" + "metrica downtime: " + downtime_pages);
+//	}
+//}
 	
 	/**
-	 * classe testWebRep È usada para testar a abertura do RespositÛrio
-	 *  Em caso de sucesso a metrica de 'uptime' È incrementada 	 
-	 * Caso contrario È incrementada contrariamente a metrica de 'downtime' e enviado um email sobre onde est· a falha
-	 */
-	//
-	//	public void testWebRep() {
-	//		try {	
-	//			driver.findElement(By.linkText("Repository"));
-	//			uptime_ref++;
-	//		}catch (Exception e) {
-	//			downtime_rep++;
-	//			System.out.println("Falha a entrar nas p·ginas! \n" + "metrica downtime: " + downtime_rep);
-	//			sendEmail("Falha a entrar nas p·ginas! \n" + "metrica downtime: " + downtime_rep);
-	//		}
-	//	}
-	
-	/**
-	 * classe sendMail È usada para enviar emails de desilus„o ao administrados caso a abertura de uma pagina 
+	 * classe sendMail √© usada para enviar emails de desilus√£o ao administrados caso a abertura de uma pagina 
 	 * falhe no site
-	 * @param email  conte˙do do email
+	 * @param email  conte√∫do do email
 	 */
 	
 	public void sendEmail(String email) {
@@ -151,14 +177,17 @@ public class CMSmonitoring {
 	}
 	
 	/**
-	 * classe runTests È usada para testar a viabilidade das p·ginas, atribuir o cabeÁalho ‡ tabela e atribuir
-	 *  as linhas e o conteudo de cada cÈlula nessa linha
+	 * classe runTests √© usada para testar a viabilidade das p√°ginas, atribuir o cabe√ßalho √† tabela e atribuir
+	 *  as linhas e o conteudo de cada c√©lula nessa linha
 	 */
 
 	public void runTests() throws InterruptedException {
 		testLogin();
-		//		testWebPages();
-		//		testWebRep();
+		//		testHomePage();
+		//		testAboutUsPage();
+		//		testCovidApplicationsPage();
+		//		testFAQPage();
+		//		testContactUsPage();
 		testAvailabilitypage(cmsURL);
 		tb.addTableHeader("metric", "value");
 		tb.addRowValues("uptime_login", Integer.toString(uptime_login) );
@@ -170,8 +199,8 @@ public class CMSmonitoring {
 	}
 	
 	/**
-	 * classe writeFile È usada para, uma vez atribuido o nome de um ficheiro e um conteudo, cria esse ficheiro 
-	 * com intuito html de forma onde o conteudo deste ser· a tabela contruida com as respetivas linhas e colunas 
+	 * classe writeFile √© usada para, uma vez atribuido o nome de um ficheiro e um conteudo, cria esse ficheiro 
+	 * com intuito html de forma onde o conteudo deste ser√° a tabela contruida com as respetivas linhas e colunas 
 	 * @param file nome a dar ao ficheiro html 
 	 * @param content conteudo a escrever no ficheiro file html
 	 * 
